@@ -2,7 +2,7 @@
 Contributors: johnbillion
 Tags: disable, plugin, updates
 Requires at least: 2.3
-Tested up to: 2.3
+Tested up to: 2.5
 Stable tag: trunk
 
 Disables the plugin update checking and notification system.

@@ -2,14 +2,14 @@
 Contributors: johnbillion
 Tags: disable, plugin, updates
 Requires at least: 2.3
-Tested up to: 2.5
+Tested up to: 2.6
 Stable tag: trunk
 
 Disables the plugin update checking and notification system.
 
 == Description ==
 
-Completely disables the plugin update checking system which is a new feature in WordPress 2.3. The plugin prevents WordPress from checking for updates, and prevents any notifications from being displayed on the Plugins page. Ideal for administrators of multiple WordPress installations.
+Completely disables the plugin update checking system in WordPress 2.3 and later. The plugin prevents WordPress from checking for updates, and prevents any notifications from being displayed on the Plugins page. Ideal for administrators of multiple WordPress installations.
 
 = Please note! =
 
@@ -17,7 +17,7 @@ It's important that you keep your WordPress plugins up to date. If you don't, yo
 
 == Installation ==
 
-This plugin is only for WordPress 2.3 or later. Earlier versions of WordPress did not have the plugin update notification system, therefore do not need this plugin.
+This plugin is only for WordPress 2.3 and later. Earlier versions of WordPress did not have the plugin update notification system, therefore do not need this plugin.
 
 1. Unzip the ZIP file and drop the folder straight into your `wp-content/plugins/` directory.
 2. Activate the plugin through the 'Plugins' menu in WordPress.

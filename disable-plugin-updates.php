@@ -3,7 +3,7 @@
 Plugin Name: Disable WordPress Plugin Updates
 Description: Disables the plugin update checking and notification system.
 Plugin URI:  http://lud.icro.us/disable-wordpress-plugin-updates/
-Version:     1.2
+Version:     1.3
 Author:      John Blackbourn
 Author URI:  http://johnblackbourn.com/
 
@@ -19,10 +19,18 @@ Author URI:  http://johnblackbourn.com/
 
 */
 
+# 2.3 to 2.7:
 add_action( 'admin_menu', create_function( '$a', "remove_action( 'load-plugins.php', 'wp_update_plugins' );") );
 	# Why use the admin_menu hook? It's the only one available between the above hook being added and being applied
 add_action( 'admin_init', create_function( '$a', "remove_action( 'admin_init', 'wp_update_plugins' );"), 2 );
 add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_update_plugins' );"), 2 );
 add_filter( 'pre_option_update_plugins', create_function( '$a', "return null;" ) );
+
+# 2.8:
+remove_action( 'load-plugins.php', 'wp_update_plugins' );
+remove_action( 'load-update.php', 'wp_update_plugins' );
+remove_action( 'admin_init', '_maybe_update_plugins' );
+remove_action( 'wp_update_plugins', 'wp_update_plugins' );
+add_filter( 'pre_transient_update_plugins', create_function( '$a', "return null;" ) );
 
 ?>

@@ -31,3 +31,18 @@ Most people will not want to (and should not) disable this feature. It's a fanta
 = Can I disable the WordPress core update notifications too? =
 
 Yes. Please see the [Disable WordPress Core Update](http://wordpress.org/extend/plugins/disable-wordpress-core-update/) plugin.
+
+= Can I disable the theme update notifications too? =
+
+Yes. Please see the [Disable WordPress Theme Updates](http://wordpress.org/extend/plugins/disable-wordpress-theme-updates/) plugin.
+
+== Changelog ==
+
+= 1.3 =
+* Support for WordPress 2.8.
+
+= 1.2 =
+* Support for WordPress 2.6.
+
+= 1.0 =
+* Initial release.

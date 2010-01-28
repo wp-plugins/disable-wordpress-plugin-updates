@@ -3,7 +3,7 @@
 Plugin Name: Disable WordPress Plugin Updates
 Description: Disables the plugin update checking and notification system.
 Plugin URI:  http://lud.icro.us/disable-wordpress-plugin-updates/
-Version:     1.3
+Version:     1.4
 Author:      John Blackbourn
 Author URI:  http://johnblackbourn.com/
 
@@ -26,11 +26,15 @@ add_action( 'admin_init', create_function( '$a', "remove_action( 'admin_init', '
 add_action( 'init', create_function( '$a', "remove_action( 'init', 'wp_update_plugins' );"), 2 );
 add_filter( 'pre_option_update_plugins', create_function( '$a', "return null;" ) );
 
-# 2.8:
+# 2.8 to 3.0:
 remove_action( 'load-plugins.php', 'wp_update_plugins' );
 remove_action( 'load-update.php', 'wp_update_plugins' );
 remove_action( 'admin_init', '_maybe_update_plugins' );
 remove_action( 'wp_update_plugins', 'wp_update_plugins' );
 add_filter( 'pre_transient_update_plugins', create_function( '$a', "return null;" ) );
+
+# 3.0:
+remove_action( 'load-update-core.php', 'wp_update_plugins' );
+add_filter( 'pre_site_transient_update_plugins', create_function( '$a', "return null;" ) );
 
 ?>

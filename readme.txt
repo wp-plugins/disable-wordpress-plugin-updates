@@ -3,7 +3,7 @@ Contributors: johnbillion
 Donate link: http://lud.icro.us/donations/
 Tags: disable, plugin, updates
 Requires at least: 2.3
-Tested up to: 3.2.1
+Tested up to: 3.3
 Stable tag: trunk
 
 Disables the plugin update checking and notification system.
